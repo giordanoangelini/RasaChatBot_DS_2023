@@ -1,0 +1,7 @@
+models/*
+!models/
+.DS_Store
+.rasa/
+actions/__pycache__/
+.env
+ngrok.exe

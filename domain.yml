@@ -1,0 +1,104 @@
+version: "3.1"
+
+config:
+    store_entities_as_slots: true
+session_config:
+    session_expiration_time: 60
+    carry_over_slots_to_new_session: true
+
+intents:
+  - greet
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - search_by_ingredient:
+      use_entities: true
+  - help
+  - start
+  - out_of_scope
+  - random
+  - stop
+  - show_more
+  - show_recipe_details:
+      use_entities: true
+  - search_recipe:
+      use_entities: true
+  - search_cuisine:
+      use_entities: true
+  - search_meal_type:
+      use_entities: true
+
+entities:
+  - ingredient
+  - id
+  - recipe
+  - cuisine
+  - meal_type
+
+slots:
+   ingredient:
+     type: list
+     mappings:
+     - type: from_entity
+       entity: ingredient
+   id:
+     type: float
+     mappings:
+     - type: from_entity
+       entity: id
+   recipe:
+     type: text
+     mappings:
+     - type: from_entity
+       entity: recipe
+   cuisine:
+     type: text
+     mappings:
+     - type: from_entity
+       entity: cuisine
+   meal_type:
+     type: text
+     mappings:
+     - type: from_entity
+       entity: meal_type
+
+responses:
+  utter_start:
+  - text: Welcome visitor, i am Spoonacular Bot, i like cooking and eating.
+        I know most recipes of the world. I can teach you
+        something or make you laugh. For more help you can type /help.
+  utter_stop:
+  - text: Goodbye, friend!
+  - text: Thanks, see you next time!
+  - text: See you later!
+  utter_greet:
+  - text: Hey! How are you?
+  utter_lets_cook:
+  - text: Let's cook something together!
+  utter_happy:
+  - text: Great, carry on!
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+  utter_send_help:
+  - text: | 
+            You can ask me to:
+            - Find a recipe by ingredients 
+            - Search a recipe by its name
+            - Search a recipe by meal type
+            - Search a recipe by cuisine type
+  utter_fallback:
+  - buttons:
+    - title: Random recipe!
+      payload: /random
+    text: Sorry! I couldn't get you! Why don't you...
+
+actions:
+  - action_search_by_ingredient
+  - action_random_recipe
+  - action_show_more
+  - action_show_recipe_details
+  - action_search_recipe
+  - action_search_cuisine
+  - action_search_meal_type

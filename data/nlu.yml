@@ -1,0 +1,223 @@
+version: "3.1"
+
+nlu:
+- intent: help
+  examples: |
+    - what can i ask you?
+    - what are your functions?
+    - what's your business?
+    - what should i ask you?
+    - how can you help me?
+    - I need your help
+    - help
+  
+- intent: start
+  examples: |
+    - start
+    - open
+    - begin
+    - init
+
+- intent: out_of_scope
+  examples: |
+    - blablabla
+    - sadasdasdasd
+    - hmmmmm
+    - hahahahhaha
+    - i'm sleeping
+    - what's the wheather update
+    - aeijfpvefvkèdlv
+    - lmlmlmlm
+    - uecwjeèqrpo
+    - aaaaaaaaaaaa
+    - pppppppppp
+    - kkkkkkk
+    - smdcspkèsj
+
+- intent: show_more
+  examples: |
+    - show more
+    - other recipe
+    - another one
+
+
+- intent: random
+  examples: |
+    - random
+    - give me a random recipe
+    - random recipe
+
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+    - yo
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - i am happy
+    - i feel great
+    - i'm fine
+    - good
+    - i had a great day
+    - me, wonderful!
+    - i am amazed
+    - you are too cool
+    - i am loving it
+    - i am starting to like this
+    - i am feeling great
+    - doing fine
+    - never better
+    - feeling lucky
+    - all great here
+    - fantastic day
+    - what a great day
+    - i'm inspired
+    - it's perfect
+    - amazing
+    - i feel wonderful
+    - i am feeling very good
+    - i am great
+    - i'm good
+    - i'm feeling awesome
+    - i'm feeling happy
+    - today is an awesome day!
+    - i'm so glad
+    - i'm just really happy right now
+
+- intent: stop
+  examples: |
+    - stop
+    - nevermind
+    - please stop
+    - i want to stop
+    - quit
+    - cu
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+    - thanks, goodbye
+
+- intent: mood_unhappy
+  examples: |
+    - i am sad
+    - i don't feel very well
+    - i am disappointed
+    - my day was horrible
+    - this is bad
+    - i am sick
+    - i am ill
+    - i am all low today
+    - its dissapointing
+    - how irritating it is
+    - am irritated
+    - i am not feeling well
+    - this sucks!
+    - i am feeling too bad
+    - worst day ever!
+    - this feels bad
+    - i feel low
+    - everything is bad today
+    - i feel very sad
+    - feels horrible
+    - this is depressing
+    - i am depressed
+    - i feel bored
+    - i am feeling bored
+    - life is boring
+    - i am feeling empty
+    - i feel useless
+    - aweful
+    - depressed
+    - heavy
+    - i am feeling quite lost
+    - very sad
+    - unhappy
+    - bad
+    - very bad
+    - awful
+    - terrible
+    - not very good
+    - extremely sad
+    - so sad
+    - im feeling down
+    - i'm feeling sad
+    - im feeling sad
+    - im not okay
+    - im feeling low
+    - not good
+    - i'm awful
+    - i'm feeling very sad
+    - i'm uneasy
+    - actually I'm not fine
+    - i'm not good
+    - i am as lonely as can be
+    - i am going through a rather rough time
+    - i'm grieving
+
+- intent: bot_challenge
+  examples: | 
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: search_by_ingredient
+  examples: |
+    - i want to eat [ingredient](ingredient)
+    - what can i do with [ingredient](ingredient)?
+    - i only have [ingredient](ingredient) in the fridge
+    - my son only eats [ingredient](ingredient)
+
+- intent: search_recipe
+  examples: |
+    - can you give me the [recipe](recipe) recipe?
+    - i want the [recipe](recipe) recipe
+    - i'd like to prepare [recipe](recipe)
+
+- intent: search_cuisine
+  examples: |
+    - i'd like to cook some [cusine](cuisine) food
+    - show me some [cusine](cuisine) plate
+    - i crave [cusine](cuisine) cuisine
+
+- intent: search_meal_type
+  examples: |
+    - i need to prepare a [meal_type](meal_type)
+    - suggest me a [meal_type](meal_type)
+    - recommend me a [meal_type](meal_type)

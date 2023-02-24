@@ -1,0 +1,74 @@
+version: "3.1"
+
+stories:
+
+- story: start talking
+  steps:
+  - intent: start
+  - action: utter_start
+
+- story: get help
+  steps:
+  - intent: help
+  - action: utter_send_help
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_lets_cook
+
+- story: stop
+  steps:
+  - intent: stop
+  - action: utter_stop
+
+- story: search by ingredient
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: search_by_ingredient
+  - action: action_search_by_ingredient
+
+- story: out_of_scope path
+  steps:
+  - intent: out_of_scope
+  - action: utter_fallback
+
+- story: random recipe
+  steps:
+  - intent: random
+  - action: action_random_recipe
+
+- story: show more
+  steps:
+  - intent: show_more
+  - action: action_show_more
+
+- story: show recipe details
+  steps:
+  - intent: show_recipe_details
+  - action: action_show_recipe_details
+
+- story: search recipe
+  steps:
+  - intent: search_recipe
+  - action: action_search_recipe
+
+- story: search cuisine
+  steps:
+  - intent: search_cuisine
+  - action: action_search_cuisine
+
+- story: search meal type
+  steps:
+  - intent: search_meal_type
+  - action: action_search_meal_type
